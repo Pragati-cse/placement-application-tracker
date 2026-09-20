@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Placement Application Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Placement Application Tracker</h1>
+
+        <p class="subtitle">
+            Track your placement and job applications in one place.
+        </p>
+
+        <!-- Application Form -->
+        <div class="form-card">
+
+            <h2 id="formTitle">Add Application</h2>
+
+            <form id="applicationForm">
+
+                <input
+                    type="text"
+                    id="companyName"
+                    placeholder="Company Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="role"
+                    placeholder="Role"
+                    required
+                >
+
+                <select id="status" required>
+                    <option value="">Select Status</option>
+                    <option value="Applied">Applied</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Selected">Selected</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+
+                <input
+                    type="date"
+                    id="applicationDate"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Location"
+                    required
+                >
+
+                <!-- Used when editing an existing application -->
+                <input
+                    type="hidden"
+                    id="applicationId"
+                >
+
+                <button type="submit" id="submitButton">
+                    Add Application
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Applications -->
+        <div class="applications-section">
+
+            <h2>My Applications</h2>
+
+            <div id="applicationsList">
+                Loading applications...
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
